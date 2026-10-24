@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "guts.nvim": {
+      "rev": "181174c2b3e5df25789141b328ace8b299c5f215",
+      "src": "https://github.com/vossenwout/guts.nvim"
+    }
+  }
+}
