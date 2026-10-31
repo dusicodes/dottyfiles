@@ -84,3 +84,7 @@ vim.keymap.set("n", "<localleader>rl", function() runner().run_line() end, { des
 vim.keymap.set("v", "<localleader>r", function() runner().run_range() end, { desc = "run visual range", silent = true })
 vim.keymap.set("n", "<localleader>RA", function() runner().run_all(true) end,
   { desc = "run all cells of all languages", silent = true })
+
+vim.keymap.set("n", "<leader>td", function()
+  require("dusicodes.floatingtodo").toggle()
+end, { desc = "Toggle floating todo" })

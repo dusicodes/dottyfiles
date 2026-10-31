@@ -33,7 +33,7 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      ColorMyPencils("base16-black-metal-gorgoroth")
+      vim.cmd.colorscheme("custom")
 
       --   -- Make comments readable (base16 uses a nearly-invisible dark grey)
       --   vim.api.nvim_set_hl(0, "Comment", { fg = "#999999", italic = true })
