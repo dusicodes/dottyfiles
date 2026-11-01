@@ -1,0 +1,15 @@
+{
+  "lastChangelogVersion": "1.4.0",
+  "theme": "opencode",
+  "defaultProvider": "opencode-go",
+  "defaultModel": "kimi-k3",
+  "packages": [
+    "npm:@jasonish/pi-default-model",
+    "npm:pi-sessions",
+    "npm:@juicesharp/rpiv-todo"
+  ],
+  "startupModel": {
+    "model": "opencode-go/deepseek-v4-pro",
+    "thinkingLevel": "max"
+  }
+}
