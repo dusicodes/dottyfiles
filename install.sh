@@ -45,8 +45,10 @@ refresh_pi() {
   mkdir -p "$PI_DIR/themes"
   cp "$DOTFILES_DIR/pi/settings.json" "$PI_DIR/settings.json"
   cp "$DOTFILES_DIR/pi/themes/opencode.json" "$PI_DIR/themes/opencode.json"
+  cp "$DOTFILES_DIR/pi/AGENTS.md" "$PI_DIR/AGENTS.md"
   printf 'copy ~/.pi/agent/settings.json (refreshed from repo)\n'
   printf 'copy ~/.pi/agent/themes/opencode.json (refreshed from repo)\n'
+  printf 'copy ~/.pi/agent/AGENTS.md (refreshed from repo)\n'
 }
 
 refresh_pi
