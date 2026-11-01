@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# dottyfiles installer: symlinks each config into ~/.config/
-# Idempotent - safe to re-run. Never clobbers an existing config; it skips
-# any target that already exists and is not already the intended link.
+# dottyfiles installer: symlinks each config into ~/.config/ and refreshes
+# the pi config in ~/.pi/agent/ from the repo copies.
+# Idempotent - safe to re-run. Symlink targets are never clobbered; the pi
+# files are plain copies overwritten with the repo version.
 #
 # Usage: ./install.sh
 
@@ -9,6 +10,7 @@ set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
+PI_DIR="${PI_CODING_AGENT_DIR:-$HOME/.pi/agent}"
 
 mkdir -p "$CONFIG_DIR"
 
@@ -38,5 +40,15 @@ link nvim
 link opencode
 link herdr
 link kitty
+
+refresh_pi() {
+  mkdir -p "$PI_DIR/themes"
+  cp "$DOTFILES_DIR/pi/settings.json" "$PI_DIR/settings.json"
+  cp "$DOTFILES_DIR/pi/themes/opencode.json" "$PI_DIR/themes/opencode.json"
+  printf 'copy ~/.pi/agent/settings.json (refreshed from repo)\n'
+  printf 'copy ~/.pi/agent/themes/opencode.json (refreshed from repo)\n'
+}
+
+refresh_pi
 
 echo "Done. Restart your terminal and apps to pick up the configs."
