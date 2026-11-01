@@ -1,0 +1,38 @@
+onboarding = false
+
+[theme]
+name = "nord"
+auto_switch = false
+
+[theme.custom]
+accent = "#C1C88D"
+panel_bg = "#222222"
+sidebar_bg = "#202020"
+active_row_bg = "#303030"
+selection_bg = "#303030"
+surface0 = "#262626"
+surface1 = "#303030"
+surface_dim = "#202020"
+overlay0 = "#7d7d7d"
+overlay1 = "#7d7d7d"
+text = "#FEFEFE"
+subtext0 = "#B4B4B4"
+mauve = "#AA9AAC"
+green = "#A2A970"
+yellow = "#DEBF7C"
+red = "#C34143"
+blue = "#8B9698"
+teal = "#8B9698"
+peach = "#DEBF7C"
+
+[keys]
+prefix = "ctrl+s"
+detach = "prefix+d"
+reload_config = "prefix+r"
+resize_mode = ""
+rename_tab = "prefix+,"
+close_tab = "prefix+&"
+cycle_pane_next = "prefix+o"
+last_pane = "prefix+;"
+split_vertical = "prefix+%"
+split_horizontal = 'prefix+"'

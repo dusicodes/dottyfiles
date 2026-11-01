@@ -1,0 +1,18 @@
+.DS_Store
+
+# opencode runtime (regenerated locally)
+opencode/node_modules/
+opencode/package.json
+opencode/package-lock.json
+opencode/bun.lock
+
+# herdr runtime state
+herdr/*.log
+herdr/*.sock*
+herdr/session.json
+herdr/session-snapshots/
+herdr/.plugins.lock
+
+# kitty editor swap files
+kitty/*.swp
+kitty/*.swo
