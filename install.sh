@@ -10,7 +10,7 @@ set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
-PI_DIR="${PI_CODING_AGENT_DIR:-$HOME/.pi/agent}"
+PI_DIR="$HOME/.pi/agent"
 
 mkdir -p "$CONFIG_DIR"
 
